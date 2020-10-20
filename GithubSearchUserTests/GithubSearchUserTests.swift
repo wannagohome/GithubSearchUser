@@ -6,28 +6,30 @@
 //
 
 import XCTest
+import RxSwift
+import RxCocoa
+import RxTest
 @testable import GithubSearchUser
 
-class GithubSearchUserTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+class SearchUserServiceTests: XCTestCase {
+    private let disposeBag = DisposeBag()
+    private var service: SearchUserServiceStub!
+    private var scheduler: TestScheduler!
+    
+    override func setUp() {
+        self.service = SearchUserServiceStub()
+        self.scheduler = TestScheduler(initialClock: 0)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testSearchUser () {
+        let result = self.scheduler.createObserver(UserList.self)
+        
+        self.scheduler.createColdObservable([.next(0, ("a"))])
+            .flatMapLatest(self.service.search)
+            .bind(to: result)
+            .disposed(by: disposeBag)
+        
+        self.scheduler.start()
+        XCTAssertNotNil(result.events)   
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
