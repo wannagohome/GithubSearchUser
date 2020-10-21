@@ -21,10 +21,23 @@ struct User: Codable {
     var login: String?
     var avatarURL: String?
     var url: String?
+    var numberOfRepos: Int = 0
 
     enum CodingKeys: String, CodingKey {
         case login
         case avatarURL = "avatar_url"
         case url
+    }
+}
+
+
+// MARK: - Repo
+struct Repo: Codable {
+    var login: String?
+    var publicRepos: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case login
+        case publicRepos = "public_repos"
     }
 }

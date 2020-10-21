@@ -22,9 +22,9 @@ class SearchUserServiceTests: XCTestCase {
     }
     
     func testSearchUser () {
-        let result = self.scheduler.createObserver(UserList.self)
+        let result = self.scheduler.createObserver([User].self)
         
-        self.scheduler.createColdObservable([.next(0, ("a"))])
+        self.scheduler.createColdObservable([.next(0, ("a", 1))])
             .flatMapLatest(self.service.search)
             .bind(to: result)
             .disposed(by: disposeBag)

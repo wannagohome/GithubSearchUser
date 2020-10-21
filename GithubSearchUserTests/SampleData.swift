@@ -644,4 +644,41 @@ struct SampleData {
       ]
     }
     """
+    
+    static let repo = """
+    {
+      "login": "A",
+      "id": 1410106,
+      "node_id": "MDQ6VXNlcjE0MTAxMDY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1410106?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/A",
+      "html_url": "https://github.com/A",
+      "followers_url": "https://api.github.com/users/A/followers",
+      "following_url": "https://api.github.com/users/A/following{/other_user}",
+      "gists_url": "https://api.github.com/users/A/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/A/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/A/subscriptions",
+      "organizations_url": "https://api.github.com/users/A/orgs",
+      "repos_url": "https://api.github.com/users/A/repos",
+      "events_url": "https://api.github.com/users/A/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/A/received_events",
+      "type": "User",
+      "site_admin": false,
+      "name": "Shuvalov Anton",
+      "company": "@winstrike",
+      "blog": "http://shuvalov.info",
+      "location": "Ho Chi Minh, Vietnam",
+      "email": null,
+      "hireable": null,
+      "bio": null,
+      "twitter_username": null,
+      "public_repos": 45,
+      "public_gists": 128,
+      "followers": 422,
+      "following": 123,
+      "created_at": "2012-02-05T14:53:26Z",
+      "updated_at": "2020-10-17T04:47:24Z"
+    }
+    """
 }
