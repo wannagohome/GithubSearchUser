@@ -26,6 +26,7 @@
 		D0A2E75C253E98AA00F70B88 /* SearchUserReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2E75B253E98AA00F70B88 /* SearchUserReactor.swift */; };
 		D0A2E77A253F2B2100F70B88 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2E778253F2B2100F70B88 /* UserCell.swift */; };
 		D0A2E77B253F2B2100F70B88 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A2E779253F2B2100F70B88 /* UserCell.xib */; };
+		D0AF945F2547F30B001D3D9B /* SearchUserViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF945E2547F30B001D3D9B /* SearchUserViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		D0A2E75B253E98AA00F70B88 /* SearchUserReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserReactor.swift; sourceTree = "<group>"; };
 		D0A2E778253F2B2100F70B88 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		D0A2E779253F2B2100F70B88 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		D0AF945E2547F30B001D3D9B /* SearchUserViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserViewControllerTests.swift; sourceTree = "<group>"; };
 		DD9F3EE342732EE077074A59 /* Pods-GithubSearchUser-GithubSearchUserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearchUser-GithubSearchUserTests.release.xcconfig"; path = "Target Support Files/Pods-GithubSearchUser-GithubSearchUserTests/Pods-GithubSearchUser-GithubSearchUserTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 			children = (
 				D030845D253AEBB900D69CF4 /* GithubSearchUserTests.swift */,
 				D080E008253FF54C00832B22 /* SearchUserReactorTests.swift */,
+				D0AF945E2547F30B001D3D9B /* SearchUserViewControllerTests.swift */,
 				D030845F253AEBB900D69CF4 /* Info.plist */,
 				D0163C3A253D9E380061DF4A /* SearchUserServiceStub.swift */,
 				D0163C54253DA3290061DF4A /* SampleData.swift */,
@@ -406,6 +409,7 @@
 				D0163C3B253D9E380061DF4A /* SearchUserServiceStub.swift in Sources */,
 				D0163C55253DA3290061DF4A /* SampleData.swift in Sources */,
 				D030845E253AEBB900D69CF4 /* GithubSearchUserTests.swift in Sources */,
+				D0AF945F2547F30B001D3D9B /* SearchUserViewControllerTests.swift in Sources */,
 				D080E009253FF54C00832B22 /* SearchUserReactorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
