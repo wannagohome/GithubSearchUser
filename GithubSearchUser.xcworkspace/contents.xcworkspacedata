@@ -2,7 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:GithubSearchUser.xcodeproj">
+      location = "group:GithubSearchUser/GithubSearchUser.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:GithubSearchUser-SwiftUI/GithubSearchUser-SwiftUI.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
