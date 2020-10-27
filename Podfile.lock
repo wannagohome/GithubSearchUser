@@ -1,8 +1,8 @@
 PODS:
-  - Alamofire (5.2.2)
-  - Kingfisher (5.15.0):
-    - Kingfisher/Core (= 5.15.0)
-  - Kingfisher/Core (5.15.0)
+  - Alamofire (5.3.0)
+  - Kingfisher (5.15.6):
+    - Kingfisher/Core (= 5.15.6)
+  - Kingfisher/Core (5.15.6)
   - ReactorKit (2.1.0):
     - RxSwift (~> 5.0)
     - WeakMapTable (~> 1.1)
@@ -14,17 +14,18 @@ PODS:
   - RxSwift (5.1.1)
   - RxTest (5.1.1):
     - RxSwift (~> 5)
-  - WeakMapTable (1.1.0)
+  - WeakMapTable (1.2.0)
 
 DEPENDENCIES:
   - Alamofire
   - Kingfisher
   - ReactorKit
   - RxCocoa
+  - RxSwift
   - RxTest
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Kingfisher
     - ReactorKit
@@ -35,15 +36,15 @@ SPEC REPOS:
     - WeakMapTable
 
 SPEC CHECKSUMS:
-  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
-  Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
+  Alamofire: 2c792affbdc2f18016e08fdbcacd60aebe1ba593
+  Kingfisher: b3554e7bf6106115b44e8795300bad580ef2fdc7
   ReactorKit: 12a93358c554bb3f167b16b14c40374fa9cd5acd
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
-  WeakMapTable: d0327eda092be6a8f7c532942ae98dc7948f5d32
+  WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: 6c77905446de89f6e27c22744cf793c9959738d3
+PODFILE CHECKSUM: e29f86b7919df657c9e715048a0dc5d52c86755d
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0
