@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FC4EA713512A9786A3CD850 /* Pods_GithubSearchUser_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44CC361DD04B8085DFAF747 /* Pods_GithubSearchUser_SwiftUI.framework */; };
+		D019548225486F77009F529C /* SearchUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019548125486F77009F529C /* SearchUserViewModel.swift */; };
 		D0AF946F25482744001D3D9B /* GithubSearchUser_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF946E25482744001D3D9B /* GithubSearchUser_SwiftUIApp.swift */; };
 		D0AF947125482744001D3D9B /* SearchUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF947025482744001D3D9B /* SearchUserView.swift */; };
 		D0AF947325482747001D3D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0AF947225482747001D3D9B /* Assets.xcassets */; };
@@ -39,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A35307B002A64465B29904F4 /* Pods-GithubSearchUser-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearchUser-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-GithubSearchUser-SwiftUI/Pods-GithubSearchUser-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		AD9B126D55017DDB6ED1DE08 /* Pods-GithubSearchUser-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearchUser-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-GithubSearchUser-SwiftUI/Pods-GithubSearchUser-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		D019548125486F77009F529C /* SearchUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserViewModel.swift; sourceTree = "<group>"; };
 		D0AF946B25482744001D3D9B /* GithubSearchUser-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GithubSearchUser-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AF946E25482744001D3D9B /* GithubSearchUser_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchUser_SwiftUIApp.swift; sourceTree = "<group>"; };
 		D0AF947025482744001D3D9B /* SearchUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserView.swift; sourceTree = "<group>"; };
@@ -57,6 +62,7 @@
 		D0AF94BD25485C9D001D3D9B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		D0AF94C525485F25001D3D9B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		D0AF94CA25485F6A001D3D9B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		E44CC361DD04B8085DFAF747 /* Pods_GithubSearchUser_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubSearchUser_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FC4EA713512A9786A3CD850 /* Pods_GithubSearchUser_SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21D38584998A067C27B3E0DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E44CC361DD04B8085DFAF747 /* Pods_GithubSearchUser_SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D0AF946225482744001D3D9B = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +106,8 @@
 				D0AF947F25482747001D3D9B /* GithubSearchUser-SwiftUITests */,
 				D0AF948A25482747001D3D9B /* GithubSearchUser-SwiftUIUITests */,
 				D0AF946C25482744001D3D9B /* Products */,
+				DE2D9F6215B0404BBC47BE60 /* Pods */,
+				21D38584998A067C27B3E0DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,11 +124,12 @@
 		D0AF946D25482744001D3D9B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				D0AF949F25483F6A001D3D9B /* Models */,
 				D0AF946E25482744001D3D9B /* GithubSearchUser_SwiftUIApp.swift */,
+				D0AF94BC25485C8D001D3D9B /* Network */,
+				D0AF949F25483F6A001D3D9B /* Models */,
 				D0AF94A525484933001D3D9B /* SampleData.swift */,
 				D0AF947025482744001D3D9B /* SearchUserView.swift */,
-				D0AF94BC25485C8D001D3D9B /* Network */,
+				D019548125486F77009F529C /* SearchUserViewModel.swift */,
 				D0AF947225482747001D3D9B /* Assets.xcassets */,
 				D0AF947725482747001D3D9B /* Info.plist */,
 				D0AF947425482747001D3D9B /* Preview Content */,
@@ -172,6 +190,16 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		DE2D9F6215B0404BBC47BE60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A35307B002A64465B29904F4 /* Pods-GithubSearchUser-SwiftUI.debug.xcconfig */,
+				AD9B126D55017DDB6ED1DE08 /* Pods-GithubSearchUser-SwiftUI.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0AF949025482747001D3D9B /* Build configuration list for PBXNativeTarget "GithubSearchUser-SwiftUI" */;
 			buildPhases = (
+				C1944FEBAFB694C9E7D8EB48 /* [CP] Check Pods Manifest.lock */,
 				D0AF946725482744001D3D9B /* Sources */,
 				D0AF946825482744001D3D9B /* Frameworks */,
 				D0AF946925482744001D3D9B /* Resources */,
+				C98A02CC1D84E587AE5AE9FC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,6 +326,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C1944FEBAFB694C9E7D8EB48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GithubSearchUser-SwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C98A02CC1D84E587AE5AE9FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GithubSearchUser-SwiftUI/Pods-GithubSearchUser-SwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GithubSearchUser-SwiftUI/Pods-GithubSearchUser-SwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GithubSearchUser-SwiftUI/Pods-GithubSearchUser-SwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D0AF946725482744001D3D9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -303,6 +375,7 @@
 			files = (
 				D0AF947125482744001D3D9B /* SearchUserView.swift in Sources */,
 				D0AF946F25482744001D3D9B /* GithubSearchUser_SwiftUIApp.swift in Sources */,
+				D019548225486F77009F529C /* SearchUserViewModel.swift in Sources */,
 				D0AF94CB25485F6A001D3D9B /* Network.swift in Sources */,
 				D0AF94A125483F6A001D3D9B /* User.swift in Sources */,
 				D0AF94BE25485C9D001D3D9B /* NetworkError.swift in Sources */,
@@ -462,6 +535,7 @@
 		};
 		D0AF949125482747001D3D9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A35307B002A64465B29904F4 /* Pods-GithubSearchUser-SwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -484,6 +558,7 @@
 		};
 		D0AF949225482747001D3D9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD9B126D55017DDB6ED1DE08 /* Pods-GithubSearchUser-SwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

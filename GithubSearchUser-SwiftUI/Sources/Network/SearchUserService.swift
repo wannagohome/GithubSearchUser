@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol SearchUserService {
-    func search(query:String, page: Int) -> AnyPublisher<[User], NetworkError>
+    func search(query:String, page: Int) -> AnyPublisher<UserList, NetworkError>
     func getNumberOfRepos(from url: String) -> AnyPublisher<Repo, NetworkError>
 }
 
@@ -22,7 +22,7 @@ final class SearchUserServiceImpl {
 }
 
 extension SearchUserServiceImpl: SearchUserService {
-    func search(query: String, page: Int = 1) -> AnyPublisher<[User], NetworkError> {
+    func search(query: String, page: Int = 1) -> AnyPublisher<UserList, NetworkError> {
         guard let url = makeSearchComponents(query: query, page: page).url else {
             return Fail(error: NetworkError.defaultError).eraseToAnyPublisher()
         }

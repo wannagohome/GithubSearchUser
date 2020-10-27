@@ -6,46 +6,69 @@
 //
 
 import SwiftUI
-
-class SearchUserViewModel: ObservableObject {
-    
-}
+import struct Kingfisher.KFImage
 
 struct SearchUserView: View {
+    @ObservedObject private var viewModel: SearchUserViewModel
+    
+    init(viewModel: SearchUserViewModel = SearchUserViewModel()) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVStack(spacing: 0, content: {
-                    ForEach(1...20, id: \.self) { index in
-                        UserView()
+            List {
+                searchField
+                
+                Section {
+                    ForEach(viewModel.userList) { user in
+                        UserView(user: user)
                     }
-                    .scaledToFill()
-                    .foregroundColor(.blue)
-                })
-                .scaledToFill()
-                .foregroundColor(.white)
+                }
             }
+            .listStyle(GroupedListStyle())
+            .navigationTitle("Github Search")
         }
-        .navigationTitle("Github Search")
-
-        
-//        Text("Hello, world!")
-//            .padding()
+    }
+    
+    private var searchField: some View {
+      HStack(alignment: .center) {
+        TextField("User Name", text: $viewModel.searchText)
+      }
     }
 }
 
 struct UserView: View {
+    private let userInfo: User
+    init(user: User) {
+        self.userInfo = user
+    }
     var body: some View {
-        ZStack() {
-            Rectangle().fill(Color.white)
-            Text("Placeholder")
+        HStack {
+            VStack {
+                KFImage(URL(string: userInfo.avatarURL!)!)
+                    .resizable()
+                    .frame(width: 60, height: 60)
+            }
+            VStack(alignment: .leading) {
+                Text("\(userInfo.login!)")
+                Text("Number of repos : \(userInfo.numberOfRepos)")
+                    .font(.footnote)
+                    .foregroundColor(.gray)
+            }
+            .padding(.leading, 15)
+            
         }
+
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchUserView()
-            .preferredColorScheme(.dark)
+        let viewModel = SearchUserViewModel()
+        let sampleData = SampleData.userList.data(using: .utf8)!
+        let result = try! JSONDecoder().decode(UserList.self, from: sampleData)
+        viewModel.userList = result.users!
+        return SearchUserView(viewModel: viewModel)
     }
 }
