@@ -21,13 +21,18 @@ struct SearchUserView: View {
                 searchField
                 
                 Section {
-                    ForEach(viewModel.userList) { user in
-                        UserView(user: user)
+                    ForEach(viewModel.userList, id: \.id) { user in
+                        UserView(user: user).onAppear {
+                            self.viewModel.appearedID.send(user.id)
+                        }
                     }
                 }
             }
             .listStyle(GroupedListStyle())
             .navigationTitle("Github Search")
+        }
+        .alert(isPresented: $viewModel.showingAlert) {
+            Alert(title: Text(viewModel.errorMessage))
         }
     }
     
