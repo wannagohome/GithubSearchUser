@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FC4EA713512A9786A3CD850 /* Pods_GithubSearchUser_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44CC361DD04B8085DFAF747 /* Pods_GithubSearchUser_SwiftUI.framework */; };
+		6058C0B58315197340E9DD1B /* Pods_GithubSearchUser_GithubSearchUser_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303530C6C2F8694E709E8D21 /* Pods_GithubSearchUser_GithubSearchUser_SwiftUI.framework */; };
 		D019548225486F77009F529C /* SearchUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019548125486F77009F529C /* SearchUserViewModel.swift */; };
 		D0AF946F25482744001D3D9B /* GithubSearchUser_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF946E25482744001D3D9B /* GithubSearchUser_SwiftUIApp.swift */; };
 		D0AF947125482744001D3D9B /* SearchUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF947025482744001D3D9B /* SearchUserView.swift */; };
@@ -16,11 +16,11 @@
 		D0AF948125482747001D3D9B /* GithubSearchUser_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF948025482747001D3D9B /* GithubSearchUser_SwiftUITests.swift */; };
 		D0AF948C25482747001D3D9B /* GithubSearchUser_SwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF948B25482747001D3D9B /* GithubSearchUser_SwiftUIUITests.swift */; };
 		D0AF94A125483F6A001D3D9B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF94A025483F6A001D3D9B /* User.swift */; };
-		D0AF94A625484933001D3D9B /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF94A525484933001D3D9B /* SampleData.swift */; };
 		D0AF94B3254849A3001D3D9B /* SearchUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF94B2254849A3001D3D9B /* SearchUserService.swift */; };
 		D0AF94BE25485C9D001D3D9B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF94BD25485C9D001D3D9B /* NetworkError.swift */; };
 		D0AF94C625485F25001D3D9B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF94C525485F25001D3D9B /* API.swift */; };
 		D0AF94CB25485F6A001D3D9B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF94CA25485F6A001D3D9B /* Network.swift */; };
+		D0DF2995254A2E660048D74E /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DF2994254A2E660048D74E /* SampleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		303530C6C2F8694E709E8D21 /* Pods_GithubSearchUser_GithubSearchUser_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubSearchUser_GithubSearchUser_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AD700B6E3DA84DD4458D2B9 /* Pods-GithubSearchUser-GithubSearchUser-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearchUser-GithubSearchUser-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-GithubSearchUser-GithubSearchUser-SwiftUI/Pods-GithubSearchUser-GithubSearchUser-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		A35307B002A64465B29904F4 /* Pods-GithubSearchUser-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearchUser-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-GithubSearchUser-SwiftUI/Pods-GithubSearchUser-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		AD9B126D55017DDB6ED1DE08 /* Pods-GithubSearchUser-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearchUser-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-GithubSearchUser-SwiftUI/Pods-GithubSearchUser-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		D019548125486F77009F529C /* SearchUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserViewModel.swift; sourceTree = "<group>"; };
@@ -57,12 +59,12 @@
 		D0AF948B25482747001D3D9B /* GithubSearchUser_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchUser_SwiftUIUITests.swift; sourceTree = "<group>"; };
 		D0AF948D25482747001D3D9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0AF94A025483F6A001D3D9B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		D0AF94A525484933001D3D9B /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		D0AF94B2254849A3001D3D9B /* SearchUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserService.swift; sourceTree = "<group>"; };
 		D0AF94BD25485C9D001D3D9B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		D0AF94C525485F25001D3D9B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		D0AF94CA25485F6A001D3D9B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		E44CC361DD04B8085DFAF747 /* Pods_GithubSearchUser_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubSearchUser_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0DF2994254A2E660048D74E /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		F1DED6CEE1B3814DA4056221 /* Pods-GithubSearchUser-GithubSearchUser-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearchUser-GithubSearchUser-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-GithubSearchUser-GithubSearchUser-SwiftUI/Pods-GithubSearchUser-GithubSearchUser-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FC4EA713512A9786A3CD850 /* Pods_GithubSearchUser_SwiftUI.framework in Frameworks */,
+				6058C0B58315197340E9DD1B /* Pods_GithubSearchUser_GithubSearchUser_SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +96,7 @@
 		21D38584998A067C27B3E0DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E44CC361DD04B8085DFAF747 /* Pods_GithubSearchUser_SwiftUI.framework */,
+				303530C6C2F8694E709E8D21 /* Pods_GithubSearchUser_GithubSearchUser_SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,9 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				D0AF946E25482744001D3D9B /* GithubSearchUser_SwiftUIApp.swift */,
+				D0DF2994254A2E660048D74E /* SampleData.swift */,
 				D0AF94BC25485C8D001D3D9B /* Network */,
 				D0AF949F25483F6A001D3D9B /* Models */,
-				D0AF94A525484933001D3D9B /* SampleData.swift */,
 				D0AF947025482744001D3D9B /* SearchUserView.swift */,
 				D019548125486F77009F529C /* SearchUserViewModel.swift */,
 				D0AF947225482747001D3D9B /* Assets.xcassets */,
@@ -195,6 +197,8 @@
 			children = (
 				A35307B002A64465B29904F4 /* Pods-GithubSearchUser-SwiftUI.debug.xcconfig */,
 				AD9B126D55017DDB6ED1DE08 /* Pods-GithubSearchUser-SwiftUI.release.xcconfig */,
+				4AD700B6E3DA84DD4458D2B9 /* Pods-GithubSearchUser-GithubSearchUser-SwiftUI.debug.xcconfig */,
+				F1DED6CEE1B3814DA4056221 /* Pods-GithubSearchUser-GithubSearchUser-SwiftUI.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
@@ -342,7 +346,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GithubSearchUser-SwiftUI-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-GithubSearchUser-GithubSearchUser-SwiftUI-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -355,15 +359,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GithubSearchUser-SwiftUI/Pods-GithubSearchUser-SwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GithubSearchUser-GithubSearchUser-SwiftUI/Pods-GithubSearchUser-GithubSearchUser-SwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GithubSearchUser-SwiftUI/Pods-GithubSearchUser-SwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GithubSearchUser-GithubSearchUser-SwiftUI/Pods-GithubSearchUser-GithubSearchUser-SwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GithubSearchUser-SwiftUI/Pods-GithubSearchUser-SwiftUI-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GithubSearchUser-GithubSearchUser-SwiftUI/Pods-GithubSearchUser-GithubSearchUser-SwiftUI-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -380,7 +384,7 @@
 				D0AF94A125483F6A001D3D9B /* User.swift in Sources */,
 				D0AF94BE25485C9D001D3D9B /* NetworkError.swift in Sources */,
 				D0AF94B3254849A3001D3D9B /* SearchUserService.swift in Sources */,
-				D0AF94A625484933001D3D9B /* SampleData.swift in Sources */,
+				D0DF2995254A2E660048D74E /* SampleData.swift in Sources */,
 				D0AF94C625485F25001D3D9B /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,7 +539,7 @@
 		};
 		D0AF949125482747001D3D9B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A35307B002A64465B29904F4 /* Pods-GithubSearchUser-SwiftUI.debug.xcconfig */;
+			baseConfigurationReference = 4AD700B6E3DA84DD4458D2B9 /* Pods-GithubSearchUser-GithubSearchUser-SwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -558,7 +562,7 @@
 		};
 		D0AF949225482747001D3D9B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD9B126D55017DDB6ED1DE08 /* Pods-GithubSearchUser-SwiftUI.release.xcconfig */;
+			baseConfigurationReference = F1DED6CEE1B3814DA4056221 /* Pods-GithubSearchUser-GithubSearchUser-SwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -22,13 +22,16 @@ final class SearchUserViewModel: ObservableObject {
             .debounce(for: .milliseconds(300),
                       scheduler: DispatchQueue(label: "SearchUserViewModel"))
             .sink(receiveValue: search(with:))
-            .store(in: &disposables)
+            .store(in: &self.disposables)
         
     }
     
     func search(with str: String) {
-        service.search(query: str, page: 1)
+        let search = service.search(query: str, page: 1)
             .compactMap { $0.users }
+            .eraseToAnyPublisher()
+        
+        search
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 guard let self = self else { return }
@@ -42,6 +45,22 @@ final class SearchUserViewModel: ObservableObject {
                 guard let self = self else { return }
                 self.userList = list
             }
-            .store(in: &disposables)
+            .store(in: &self.disposables)
+        
+        $userList
+            .compactMap { $0.compactMap { $0.url } }
+            .flatMap { $0.publisher }
+            .flatMap (service.getNumberOfRepos(from:))
+            .receive(on: DispatchQueue.main)
+            .sink { _  in
+            } receiveValue: { [weak self] repo in
+                guard let self = self else { return }
+                for (index, user) in self.userList.enumerated() {
+                    if user.login == repo.login {
+                        self.userList[index].numberOfRepos = repo.publicRepos!
+                    }
+                }
+            }
+            .store(in: &self.disposables)
     }
 }
