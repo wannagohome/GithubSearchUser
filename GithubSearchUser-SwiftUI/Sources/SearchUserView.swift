@@ -17,18 +17,18 @@ struct SearchUserView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
+            VStack(spacing: 0) {
                 searchField
                     .padding(.bottom, 10)
-                    
                 
-                ForEach(viewModel.userList, id: \.id) { user in
+                List(viewModel.userList, id: \.id) { user in
                     UserView(user: user).onAppear {
                         self.viewModel.appearedID.send(user.id)
                     }
-                    Divider()
                 }
+                .listStyle(PlainListStyle())
             }
+            
             .navigationTitle("Github Search")
         }
         .alert(isPresented: $viewModel.showingAlert) {
@@ -42,7 +42,6 @@ struct SearchUserView: View {
                 .padding(.leading, 27)
         }
         .padding()
-        
         .background(Color(.systemGray6))
         .cornerRadius(6)
         .overlay(
@@ -69,7 +68,6 @@ struct UserView: View {
                     .resizable()
                     .frame(width: 60, height: 60)
             }
-            .padding(.leading, 15)
             
             VStack(alignment: .leading) {
                 Text("\(userInfo.login!)")

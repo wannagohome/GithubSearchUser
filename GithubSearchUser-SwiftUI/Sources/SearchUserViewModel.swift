@@ -36,6 +36,7 @@ final class SearchUserViewModel: ObservableObject {
                 guard lastRowCount - 1 == lastIndex else { return nil }
                 return lastRowCount / 20 + 1
             }
+            .print()
             .map { (self.searchText, $0) }
             .eraseToAnyPublisher()
         
@@ -69,7 +70,7 @@ final class SearchUserViewModel: ObservableObject {
             .compactMap { $0.compactMap { $0.url } }
             .flatMap { $0.publisher }
             .flatMap (self.service.getNumberOfRepos(from:))
-            .receive(on: DispatchQueue.main)
+//            .receive(on: DispatchQueue.main)
             .sink (receiveCompletion: handelError,
                    receiveValue: { [weak self] repo in
                 guard let self = self else { return }
