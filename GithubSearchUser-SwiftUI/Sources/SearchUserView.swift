@@ -17,18 +17,18 @@ struct SearchUserView: View {
     
     var body: some View {
         NavigationView {
-            List {
+            ScrollView {
                 searchField
+                    .padding(.bottom, 10)
+                    
                 
-                Section {
-                    ForEach(viewModel.userList, id: \.id) { user in
-                        UserView(user: user).onAppear {
-                            self.viewModel.appearedID.send(user.id)
-                        }
+                ForEach(viewModel.userList, id: \.id) { user in
+                    UserView(user: user).onAppear {
+                        self.viewModel.appearedID.send(user.id)
                     }
+                    Divider()
                 }
             }
-            .listStyle(GroupedListStyle())
             .navigationTitle("Github Search")
         }
         .alert(isPresented: $viewModel.showingAlert) {
@@ -37,9 +37,23 @@ struct SearchUserView: View {
     }
     
     private var searchField: some View {
-      HStack(alignment: .center) {
-        TextField("User Name", text: $viewModel.searchText)
-      }
+        HStack {
+            TextField("User Name", text: $viewModel.searchText)
+                .padding(.leading, 27)
+        }
+        .padding()
+        
+        .background(Color(.systemGray6))
+        .cornerRadius(6)
+        .overlay(
+            HStack {
+                Image(systemName: "magnifyingglass")
+                Spacer()
+            }
+            .padding(.horizontal, 18)
+            .foregroundColor(.gray)
+        )
+        .padding(.horizontal)
     }
 }
 
@@ -55,6 +69,8 @@ struct UserView: View {
                     .resizable()
                     .frame(width: 60, height: 60)
             }
+            .padding(.leading, 15)
+            
             VStack(alignment: .leading) {
                 Text("\(userInfo.login!)")
                 Text("Number of repos : \(userInfo.numberOfRepos)")
@@ -63,6 +79,7 @@ struct UserView: View {
             }
             .padding(.leading, 15)
             
+            Spacer()
         }
 
     }
