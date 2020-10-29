@@ -16,6 +16,7 @@ final class SearchUserViewModel: ObservableObject {
     @Published var searchText: String = ""
     @Published var userList: [User] = [User]()
     @Published var showingAlert: Bool = false
+    @Published private var getRepos: Bool = false
     @Published var errorMessage: String = ""
     
     let appearedID = PassthroughSubject<UUID?, NetworkError>()
@@ -36,7 +37,6 @@ final class SearchUserViewModel: ObservableObject {
                 guard lastRowCount - 1 == lastIndex else { return nil }
                 return lastRowCount / 20 + 1
             }
-            .print()
             .map { (self.searchText, $0) }
             .eraseToAnyPublisher()
         
@@ -46,13 +46,12 @@ final class SearchUserViewModel: ObservableObject {
             .sink(receiveCompletion: handelError,
                   receiveValue: { userList in
                 self.userList += userList.users ?? []
+                self.getRepos = true
             })
             .store(in: &self.cancellables)
-
-        
     }
     
-    func search(with str: String) {
+    private func search(with str: String) {
         let search = self.service.search(query: str, page: self.currentPage)
             .compactMap { $0.users }
             .eraseToAnyPublisher()
@@ -63,14 +62,16 @@ final class SearchUserViewModel: ObservableObject {
                    receiveValue: { [weak self] list in
                 guard let self = self else { return }
                 self.userList = list
+                self.getRepos = true
             })
             .store(in: &self.cancellables)
         
-        $userList
-            .compactMap { $0.compactMap { $0.url } }
+        $getRepos
+            .filter  { $0 }
+            .compactMap { _ in self.userList.compactMap { $0.url } }
             .flatMap { $0.publisher }
             .flatMap (self.service.getNumberOfRepos(from:))
-//            .receive(on: DispatchQueue.main)
+            .receive(on: DispatchQueue.main)
             .sink (receiveCompletion: handelError,
                    receiveValue: { [weak self] repo in
                 guard let self = self else { return }
@@ -79,13 +80,15 @@ final class SearchUserViewModel: ObservableObject {
                         self.userList[index].numberOfRepos = repo.publicRepos!
                     }
                 }
+                    self.getRepos = false
             })
             .store(in: &self.cancellables)
     }
     
-    func handelError(completion: Subscribers.Completion<NetworkError>) {
+    private func handelError(completion: Subscribers.Completion<NetworkError>) {
         guard case .failure(let error) = completion else { return }
         self.userList.removeAll()
+        self.getRepos = false
         self.showingAlert = true
         self.errorMessage = error.message ?? "Error"
     }
